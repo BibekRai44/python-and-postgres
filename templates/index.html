@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} programminglanguage {% endblock %}</h1>
+    {% for programminglanguage in pl %}
+        <div class='pl'>
+            <h3>#{{ pl[0] }} - {{ pl[1] }} BY {{ pl[2] }}</h3>
+            <i><p>({{ pl[3] }} name)</p></i>
+            <p class='review'>{{ pl[4] }}</p>
+            <i><p>Added {{ pl[5] }}</p></i>
+        </div>
+    {% endfor %}
+{% endblock %}
