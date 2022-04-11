@@ -37,6 +37,7 @@ cur.execute('INSERT INTO pl (id,name, planguage, info)'
            )
 
 
+
 conn.commit()
 cur.close()
 conn.close()                         
