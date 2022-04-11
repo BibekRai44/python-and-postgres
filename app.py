@@ -1,7 +1,7 @@
 
 import os
 import psycopg2
-from flask import Flask,render_template
+from flask import Flask,render_template,request,url_for,redirect
 
 app=Flask(__name__)
 
@@ -20,3 +20,22 @@ def index():
     cur.close()
     conn.close()
     return render_template('index.html',pl=pl)
+
+@app.route('/create/', methods=('GET', 'POST'))
+def create():
+    if request.method == 'POST':
+        id= request.form['id']
+        name = request.form['name']
+        planguage = int(request.form['planguage'])
+        info= request.form['info']
+
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute('INSERT INTO pl(id,name,planguage,info)'
+                    'VALUES (%s, %s, %s, %s)',
+                    (id, name,planguage,info))
+        conn.commit()
+        cur.close()
+        conn.close()
+        return redirect(url_for('index'))
+    return render_template('create.html')

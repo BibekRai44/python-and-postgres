@@ -22,6 +22,7 @@ cur.executemany('INSERT INTO pl (id,name, planguage, info)'
             (3,'kishor','Go','Go is a statically typed, compiled programming language'),
             (4,'asmit','Dart','Dart is a programming language designed for client development'),
             (5,'nawaraj','Java','Java is a high-level, class-based, object-oriented programming language')
+            
             ])
 
  
