@@ -2,16 +2,14 @@
 
 {% block content %}
     <h1>{% block title %} programminglanguage {% endblock %}</h1>
-    {% for programminglanguage in pl %}
-    <div class="pl">
-        <p>{{pl[0] }}}</p>
-        <p>{{ pl[1] }} </p>
-        <p>{{pl[2]  }}</p>
-        <p>{{ pl[3] }}</p>
-        <p>{{ pl[4] }}</p>
-    </div>
-        
-        
-        
+    {% for p in pl %}
+        <div class="pl">
+            <p>{{p[0] }}}</p>
+            <p>{{p[1] }} </p>
+            <p>{{p[2]  }}</p>
+            <p>{{ p[3] }}</p>
+            <p>{{ p[4] }}</p>
+        </div>
+                
     {% endfor %}
 {% endblock %}
