@@ -10,6 +10,7 @@ Here I have also done postgresql database mangement with flask.
 
 
 <font size=1>Project Image 1</font>
+
 ![github issue solution](https://user-images.githubusercontent.com/60976347/162717985-559ed4d4-0040-490b-974d-9bf7874c52be.PNG)
 
 
